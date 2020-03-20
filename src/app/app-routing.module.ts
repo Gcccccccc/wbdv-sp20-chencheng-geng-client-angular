@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: 'table/courses', component: CourseTableComponent},
   {path: ':layout/courses/:cid/modules', component: CourseViewerComponent},
   {path: ':layout/courses/:cid/modules/:mid/lessons', component: CourseViewerComponent},
-  // {path: '', component: CourseViewerComponent}
+  {path: ':layout/courses/:cid/modules/:mid/lessons/:lid/topics', component: CourseViewerComponent}
 ];
 
 @NgModule({

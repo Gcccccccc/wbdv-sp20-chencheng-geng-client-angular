@@ -13,6 +13,7 @@ import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import {FormsModule} from '@angular/forms';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import { TopicPillsComponent } from './topic-pills/topic-pills.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
     CourseViewerComponent,
     ModuleListComponent,
     LessonTabsComponent,
-    HomePageComponent
+    HomePageComponent,
+    TopicPillsComponent
   ],
   imports: [
     FormsModule,
