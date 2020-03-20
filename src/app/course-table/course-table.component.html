@@ -6,7 +6,7 @@
     <li class="list-group-item" *ngFor="let course of courses">
       <fa-icon [icon]="faFile" class="icon"></fa-icon>
       &nbsp;
-      <a href="/table/courses/{{course._id}}/modules">
+      <a routerLink="/table/courses/{{course._id}}/modules">
         {{course.title}}
       </a>
     </li>
