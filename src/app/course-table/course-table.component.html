@@ -1,0 +1,14 @@
+<div class="container">
+  <ul class="list-group">
+    <li class="list-group-item">
+      <b>Course</b>
+    </li>
+    <li class="list-group-item" *ngFor="let course of courses">
+      <fa-icon [icon]="faFile" class="icon"></fa-icon>
+      &nbsp;
+      <a href="table/courses/{{course._id}}/modules">
+        {{course.title}}
+      </a>
+    </li>
+  </ul>
+</div>

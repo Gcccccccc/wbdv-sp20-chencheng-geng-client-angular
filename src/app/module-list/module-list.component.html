@@ -1,0 +1,8 @@
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let module of modules"
+      [class]="{'active': moduleId === module._id}">
+    <a href="table/courses/{{courseId}}/modules/{{module._id}}/lessons">
+      {{module.title}}
+    </a>
+  </li>
+</ul>

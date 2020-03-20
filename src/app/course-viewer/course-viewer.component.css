@@ -1,0 +1,19 @@
+.icon{
+  margin-left: 40px;
+  margin-right: 15px;
+}
+
+.course-title{
+  font-size: xx-large;
+  font-weight: bold;
+}
+.row{
+  display: flex;
+  align-items: center;
+}
+
+
+
+.module-list {
+  padding: 25px;
+}
