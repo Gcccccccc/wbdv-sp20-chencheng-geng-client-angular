@@ -14,6 +14,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import {FormsModule} from '@angular/forms';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import { TopicPillsComponent } from './topic-pills/topic-pills.component';
+import {TopicServiceClient} from './services/TopicServiceClient';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { TopicPillsComponent } from './topic-pills/topic-pills.component';
   providers: [
     CourseServiceClient,
     ModuleServiceClient,
-    LessonServiceClient
+    LessonServiceClient,
+    TopicServiceClient
   ],
   bootstrap: [AppComponent]
 })

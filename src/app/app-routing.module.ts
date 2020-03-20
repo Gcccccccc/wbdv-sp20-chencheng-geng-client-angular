@@ -10,9 +10,9 @@ const routes: Routes = [
   {path: 'table/courses', component: CourseTableComponent},
   {path: ':layout/courses/:cid/modules', component: CourseViewerComponent},
   {path: ':layout/courses/:cid/modules/:mid/lessons', component: CourseViewerComponent},
-  {path: ':layout/courses/:cid/modules/:mid/lessons/:lid/topics', component: CourseViewerComponent}
+  {path: ':layout/courses/:cid/modules/:mid/lessons/:lid/topics', component: CourseViewerComponent},
+  {path: ':layout/courses/:cid/modules/:mid/lessons/:lid/topics/:tid/widgets', component: CourseViewerComponent}
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

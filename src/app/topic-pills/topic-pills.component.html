@@ -1,1 +1,8 @@
-<p>topic-pills works!</p>
+<ul class="nav nav-pills">
+  <li class="nav-item" *ngFor="let topic of topics">
+    <a class="nav-link active" [class]="{'active': topicId === topic._id}"
+     href="table/courses/{{courseId}}/modules/{{moduleId}}/lessons/{{lessonId}}/topics/{{topic._id}}/widgets">
+      {{topic.title}}
+    </a>
+  </li>
+</ul>
