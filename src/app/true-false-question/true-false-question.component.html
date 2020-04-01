@@ -1,0 +1,40 @@
+<h3>True or False {{question._id}}</h3>
+<h4>{{question.question}}
+  <fa-icon [icon]="faCheck" class="icon-check float-right" [hidden]="grading === false || answer !== question.correct"></fa-icon>
+  <fa-icon [icon]="faTimes" class="icon-times float-right" [hidden]="grading === false || answer === question.correct"></fa-icon>
+</h4>
+
+<ul class="list-group">
+  <li class="list-group-item"
+      [class]="{'li-green': grading === true && question.correct === 'true',
+                'li-red': grading === true && question.correct === 'false' && answer === 'true'}">
+    <label>
+      <input
+        [(ngModel)]="answer"
+        type="radio"
+        value="true"
+        name="{{question._id}}"
+        [disabled]="grading === true"/> True
+    </label>
+    <fa-icon [icon]="faCheck" class="icon-check float-right" [hidden]="grading === false || question.correct !== 'true'"></fa-icon>
+    <fa-icon [icon]="faTimes" class="icon-times float-right" [hidden]="grading === false || answer === question.correct || question.correct !=='false'"></fa-icon>
+  </li>
+  <li class="list-group-item"
+      [class]="{'li-green': grading === true && question.correct === 'false',
+                'li-red': grading === true && question.correct === 'true' && answer === 'false'}">
+    <label>
+      <input
+        [(ngModel)]="answer"
+        type="radio"
+        value="false"
+        name="{{question._id}}"
+        [disabled]="grading === true"/> False
+    </label>
+    <fa-icon [icon]="faCheck" class="icon-check float-right" [hidden]="grading === false || question.correct !== 'false'"></fa-icon>
+    <fa-icon [icon]="faTimes" class="icon-times float-right" [hidden]="grading === false || answer === question.correct || question.correct !== 'true'"></fa-icon>
+  </li>
+</ul>
+<br/>
+Your answer: {{answer}}
+<br/>
+<button (click)="grade()">Grade</button>

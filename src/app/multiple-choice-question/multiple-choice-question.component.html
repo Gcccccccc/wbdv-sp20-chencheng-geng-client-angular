@@ -1,0 +1,13 @@
+<h3>Multiple Choice</h3>
+<h4>{{question.question}}</h4>
+<ul class="list-group">
+  <li  class="list-group-item" *ngFor="let option of question.choices">
+    <label>
+      <input [(ngModel)]="answer"
+             type="radio"
+             value="{{option}}"
+             name="{{question._id}}"/> {{option}}
+    </label>
+  </li>
+</ul>
+Your answer: {{answer}}

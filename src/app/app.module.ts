@@ -15,6 +15,12 @@ import {FormsModule} from '@angular/forms';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import { TopicPillsComponent } from './topic-pills/topic-pills.component';
 import {TopicServiceClient} from './services/TopicServiceClient';
+import { QuizzesComponent } from './quizzes/quizzes.component';
+import {QuizServiceClient} from './services/quiz.service.client';
+import { QuestionServiceClient } from './services/question.service.client';
+import { QuizComponent } from './quiz/quiz.component';
+import { TrueFalseQuestionComponent } from './true-false-question/true-false-question.component';
+import { MultipleChoiceQuestionComponent } from './multiple-choice-question/multiple-choice-question.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +30,11 @@ import {TopicServiceClient} from './services/TopicServiceClient';
     ModuleListComponent,
     LessonTabsComponent,
     HomePageComponent,
-    TopicPillsComponent
+    TopicPillsComponent,
+    QuizzesComponent,
+    QuizComponent,
+    TrueFalseQuestionComponent,
+    MultipleChoiceQuestionComponent
   ],
   imports: [
     FormsModule,
@@ -36,7 +46,9 @@ import {TopicServiceClient} from './services/TopicServiceClient';
     CourseServiceClient,
     ModuleServiceClient,
     LessonServiceClient,
-    TopicServiceClient
+    TopicServiceClient,
+    QuizServiceClient,
+    QuestionServiceClient
   ],
   bootstrap: [AppComponent]
 })
