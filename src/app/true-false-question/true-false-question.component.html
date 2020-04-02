@@ -1,4 +1,4 @@
-<h3>True or False {{question._id}}</h3>
+<h3>True or False</h3>
 <h4>{{question.question}}
   <fa-icon [icon]="faCheck" class="icon-check float-right" [hidden]="grading === false || answer !== question.correct"></fa-icon>
   <fa-icon [icon]="faTimes" class="icon-times float-right" [hidden]="grading === false || answer === question.correct"></fa-icon>
@@ -37,4 +37,4 @@
 <br/>
 Your answer: {{answer}}
 <br/>
-<button (click)="grade()">Grade</button>
+<button (click)="grade()" class="btn-success">Grade</button>

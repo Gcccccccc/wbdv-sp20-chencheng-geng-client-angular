@@ -9,7 +9,7 @@ import {faCheck, faTimes} from '@fortawesome/free-solid-svg-icons';
 export class TrueFalseQuestionComponent implements OnInit {
   constructor() { }
   @Input()
-  question = {_id: '', title: '', question: '', correct: ''}
+  question = {_id: '', title: '', question: '', correct: '', answer: '' }
   grading = false
   faCheck = faCheck;
   faTimes = faTimes;

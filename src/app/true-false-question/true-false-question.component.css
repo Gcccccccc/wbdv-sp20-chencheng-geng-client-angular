@@ -15,3 +15,8 @@
   background-color: #f9b9b2;
   color: red;
 }
+
+.btn-success{
+  border-radius: 5px;
+  border-width: 0px;
+}

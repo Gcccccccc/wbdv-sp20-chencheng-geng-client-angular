@@ -1,13 +1,24 @@
 <h3>Multiple Choice</h3>
-<h4>{{question.question}}</h4>
+<h4>{{question.question}}
+  <fa-icon [icon]="faCheck" class="icon-check float-right" [hidden]="grading === false || answer !== question.correct"></fa-icon>
+  <fa-icon [icon]="faTimes" class="icon-times float-right" [hidden]="grading === false || answer === question.correct"></fa-icon>
+</h4>
 <ul class="list-group">
-  <li  class="list-group-item" *ngFor="let option of question.choices">
+  <li class="list-group-item" *ngFor="let option of question.choices"
+      [class]="{'li-green': grading === true && question.correct === option,
+                'li-red': grading === true && question.correct !== option && answer === option}">
     <label>
       <input [(ngModel)]="answer"
              type="radio"
              value="{{option}}"
-             name="{{question._id}}"/> {{option}}
+             name="{{question._id}}"
+             [disabled]="grading === true"/> {{option}}
     </label>
+    <fa-icon [icon]="faCheck" class="icon-check float-right" [hidden]="grading === false || question.correct !== option"></fa-icon>
+    <fa-icon [icon]="faTimes" class="icon-times float-right" [hidden]="grading === false || answer !== option || question.correct === option"></fa-icon>
   </li>
 </ul>
+<br/>
 Your answer: {{answer}}
+<br/>
+<button (click)="grade()" class="btn-success">Grade</button>

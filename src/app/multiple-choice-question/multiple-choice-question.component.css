@@ -1,0 +1,22 @@
+.btn-success{
+  border-radius: 5px;
+  border-width: 0px;
+}
+
+.icon-check {
+  color: green;
+}
+
+.icon-times{
+  color: red;
+}
+
+.li-green{
+  background-color: #b4dabd;
+  color: green;
+}
+
+.li-red{
+  background-color: #f9b9b2;
+  color: red;
+}
