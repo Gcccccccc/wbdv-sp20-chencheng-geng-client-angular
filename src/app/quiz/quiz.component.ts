@@ -16,15 +16,27 @@ export class QuizComponent implements OnInit {
   questions = []
   quizId = ''
   quizTitle = ''
+  score = 0
+  submitted = false
+  scoreQuiz = (questions) => {
+    let numberOfCorrectQuestions = 0
+    questions.forEach(question => question.answer === question.correct ?
+      numberOfCorrectQuestions++ : numberOfCorrectQuestions)
+    return 100 * numberOfCorrectQuestions / questions.length
+  }
   submitQuiz = () => {
-    fetch(`http://localhost:3000/api/quizzes/${this.quizId}/attempts`, {
+    fetch(`https://a9-chencheng-server.herokuapp.com/api/quizzes/${this.quizId}/attempts`, {
       method: 'POST',
       body: JSON.stringify(this.questions),
       headers: {
         'content-type': 'application/json'
       }
     }).then(response => response.json())
-      .then(result => console.log(result))
+      .then(result => {
+        console.log(result);
+        this.score = this.scoreQuiz(this.questions);
+        this.submitted = true;
+      });
   }
 
   ngOnInit(): void {
